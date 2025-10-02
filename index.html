@@ -1,12 +1,159 @@
 <!doctype html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>My Site</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-  </head>
-  <body>
-    <h1>Hello from GitHub Pages</h1>
-    <p>This is my homepage.</p>
-  </body>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Your Name — CV</title>
+  <meta name="description" content="Curriculum Vitae of Your Name: research, experience, publications, projects." />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="avatar" aria-hidden="true"></div>
+    <div>
+      <h1>Your Name</h1>
+      <p class="subtitle">Researcher · Computer Vision · Deep Learning</p>
+      <ul class="meta">
+        <li><a href="mailto:you@university.edu">you@university.edu</a></li>
+        <li><a href="https://github.com/YOURUSERNAME" target="_blank" rel="noopener">github.com/YOURUSERNAME</a></li>
+        <li><a href="https://scholar.google.com/" target="_blank" rel="noopener">Google Scholar</a></li>
+        <li>City, Country</li>
+      </ul>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- Left column -->
+    <section class="column">
+      <section class="card">
+        <h2>Profile</h2>
+        <p>
+          I am a <strong>Research Fellow</strong> at <strong>Your Lab, Your University</strong>.
+          My work focuses on <em>object detection</em>, <em>segmentation</em>, and
+          <em>efficient models on edge devices</em>.
+        </p>
+      </section>
+
+      <section class="card">
+        <h2>Experience</h2>
+        <article class="item">
+          <div class="item-head">
+            <h3>Research Fellow — Your University</h3>
+            <span>2023–Present</span>
+          </div>
+          <p>Advisor: Prof. X. Led projects on multi-scale fusion, boundary preservation,
+            and deployment on Jetson-class hardware.</p>
+          <ul class="bullets">
+            <li>Designed MFA module improving IoU by 2.7% on Cityscapes.</li>
+            <li>Quantized models to INT8 for 2.2× speedup with < 1% mAP drop.</li>
+          </ul>
+        </article>
+
+        <article class="item">
+          <div class="item-head">
+            <h3>Machine Learning Engineer — Company</h3>
+            <span>2021–2023</span>
+          </div>
+          <p>Built on-device vision models for industrial inspection.</p>
+          <ul class="bullets">
+            <li>Shipped real-time defect detection (60 FPS) on NVIDIA NX.</li>
+          </ul>
+        </article>
+      </section>
+
+      <section class="card">
+        <h2>Education</h2>
+        <article class="item">
+          <div class="item-head">
+            <h3>M.S., Computer Science — Your University</h3>
+            <span>2019–2021</span>
+          </div>
+          <p>Thesis: “Lightweight Attention for Dense Prediction.”</p>
+        </article>
+      </section>
+
+      <section class="card">
+        <h2>Publications</h2>
+        <ol class="pubs">
+          <li>
+            <strong>Title of Your Paper</strong><br />
+            Your Name, Coauthor. <em>IEEE TCSVT</em>, 2025. 
+            [<a href="#">PDF</a>] [<a href="#">Code</a>] [<a href="#">Project</a>]
+          </li>
+          <li>
+            <strong>Boundary-Preserving Fusion for Segmentation</strong><br />
+            Your Name, … <em>CVPR</em>, 2024.
+            [<a href="#">PDF</a>] [<a href="#">Code</a>]
+          </li>
+        </ol>
+      </section>
+    </section>
+
+    <!-- Right column -->
+    <aside class="column">
+      <section class="card">
+        <h2>Skills</h2>
+        <ul class="tags">
+          <li>PyTorch</li><li>TensorRT</li><li>ONNX</li>
+          <li>Segmentation</li><li>Detection</li><li>Quantization</li>
+          <li>Jetson</li><li>CUDA</li><li>Python</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2>Selected Projects</h2>
+        <div class="proj">
+          <div>
+            <h3><a href="#">MFA + Boundary Module</a></h3>
+            <p>Two-branch fusion (focus + boundary) with learnable gating.</p>
+          </div>
+          <span class="badge">2025</span>
+        </div>
+        <div class="proj">
+          <div>
+            <h3><a href="#">Edge-Seg on Jetson</a></h3>
+            <p>INT8 pipeline via PTQ/QAT; TensorRT engines & calibration.</p>
+          </div>
+          <span class="badge">2024</span>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>Awards</h2>
+        <ul class="list">
+          <li>Best Paper (Your Conf), 2024</li>
+          <li>Research Scholarship, 2023</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2>Service</h2>
+        <ul class="list">
+          <li>Reviewer: CVPR, ICCV, TCSVT</li>
+          <li>TA: Deep Learning, 2022</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2>Contact</h2>
+        <p>
+          <strong>Email:</strong> <a href="mailto:you@university.edu">you@university.edu</a><br />
+          <strong>Website:</strong> <a href="https://YOURUSERNAME.github.io">YOURUSERNAME.github.io</a>
+        </p>
+      </section>
+    </aside>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="y"></span> Your Name · Last updated Oct 2025</p>
+  </footer>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+</body>
 </html>
